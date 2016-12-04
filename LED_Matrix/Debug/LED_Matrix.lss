@@ -1,0 +1,1744 @@
+
+LED_Matrix.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000001c  00800100  00000ce2  00000d76  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000ce2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  0080011c  0080011c  00000d92  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000d92  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000038  00000000  00000000  00000dc2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000007c7  00000000  00000000  00000dfa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000159  00000000  00000000  000015c1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003c5  00000000  00000000  0000171a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000054  00000000  00000000  00001ae0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000207  00000000  00000000  00001b34  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000028  00000000  00000000  00001d3b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__ctors_end>
+   4:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+   8:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+   c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  10:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  14:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  18:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  1c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  20:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  24:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  28:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  2c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  30:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  34:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  38:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  3c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  40:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  44:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  48:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  4c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  50:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  54:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  58:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  5c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  60:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  64:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  68:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  6c:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  70:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  74:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+  78:	0c 94 5b 00 	jmp	0xb6	; 0xb6 <__bad_interrupt>
+
+0000007c <__ctors_end>:
+  7c:	11 24       	eor	r1, r1
+  7e:	1f be       	out	0x3f, r1	; 63
+  80:	cf ef       	ldi	r28, 0xFF	; 255
+  82:	d8 e0       	ldi	r29, 0x08	; 8
+  84:	de bf       	out	0x3e, r29	; 62
+  86:	cd bf       	out	0x3d, r28	; 61
+
+00000088 <__do_copy_data>:
+  88:	11 e0       	ldi	r17, 0x01	; 1
+  8a:	a0 e0       	ldi	r26, 0x00	; 0
+  8c:	b1 e0       	ldi	r27, 0x01	; 1
+  8e:	e2 ee       	ldi	r30, 0xE2	; 226
+  90:	fc e0       	ldi	r31, 0x0C	; 12
+  92:	02 c0       	rjmp	.+4      	; 0x98 <__do_copy_data+0x10>
+  94:	05 90       	lpm	r0, Z+
+  96:	0d 92       	st	X+, r0
+  98:	ac 31       	cpi	r26, 0x1C	; 28
+  9a:	b1 07       	cpc	r27, r17
+  9c:	d9 f7       	brne	.-10     	; 0x94 <__do_copy_data+0xc>
+
+0000009e <__do_clear_bss>:
+  9e:	21 e0       	ldi	r18, 0x01	; 1
+  a0:	ac e1       	ldi	r26, 0x1C	; 28
+  a2:	b1 e0       	ldi	r27, 0x01	; 1
+  a4:	01 c0       	rjmp	.+2      	; 0xa8 <.do_clear_bss_start>
+
+000000a6 <.do_clear_bss_loop>:
+  a6:	1d 92       	st	X+, r1
+
+000000a8 <.do_clear_bss_start>:
+  a8:	a0 32       	cpi	r26, 0x20	; 32
+  aa:	b2 07       	cpc	r27, r18
+  ac:	e1 f7       	brne	.-8      	; 0xa6 <.do_clear_bss_loop>
+  ae:	0e 94 69 06 	call	0xcd2	; 0xcd2 <main>
+  b2:	0c 94 6f 06 	jmp	0xcde	; 0xcde <_exit>
+
+000000b6 <__bad_interrupt>:
+  b6:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000ba <smiley>:
+	PORTB &= ~(1<<colPin3);
+	PORTA &= ~(1<<colPin4);
+	PORTB &= ~(1<<colPin5);
+	PORTA &= ~(1<<colPin6);
+	PORTA |= (1<<colPin7);
+	PORTA |= (1<<colPin8);	
+  ba:	42 b1       	in	r20, 0x02	; 2
+    
+ //Row High turns LED on
+	PORTA |= (1<<rowPin1);
+  bc:	81 e0       	ldi	r24, 0x01	; 1
+  be:	90 e0       	ldi	r25, 0x00	; 0
+  c0:	9c 01       	movw	r18, r24
+  c2:	00 90 1a 01 	lds	r0, 0x011A
+  c6:	02 c0       	rjmp	.+4      	; 0xcc <smiley+0x12>
+  c8:	22 0f       	add	r18, r18
+  ca:	33 1f       	adc	r19, r19
+  cc:	0a 94       	dec	r0
+  ce:	e2 f7       	brpl	.-8      	; 0xc8 <smiley+0xe>
+  d0:	24 2b       	or	r18, r20
+	PORTA &= ~(1<<rowPin2);
+  d2:	22 b9       	out	0x02, r18	; 2
+  d4:	45 b1       	in	r20, 0x05	; 5
+  d6:	9c 01       	movw	r18, r24
+  d8:	00 90 18 01 	lds	r0, 0x0118
+  dc:	02 c0       	rjmp	.+4      	; 0xe2 <smiley+0x28>
+  de:	22 0f       	add	r18, r18
+  e0:	33 1f       	adc	r19, r19
+  e2:	0a 94       	dec	r0
+  e4:	e2 f7       	brpl	.-8      	; 0xde <smiley+0x24>
+  e6:	24 2b       	or	r18, r20
+  e8:	25 b9       	out	0x05, r18	; 5
+	PORTB &= ~(1<<rowPin3);
+  ea:	45 b1       	in	r20, 0x05	; 5
+  ec:	9c 01       	movw	r18, r24
+  ee:	00 90 16 01 	lds	r0, 0x0116
+  f2:	02 c0       	rjmp	.+4      	; 0xf8 <smiley+0x3e>
+  f4:	22 0f       	add	r18, r18
+  f6:	33 1f       	adc	r19, r19
+  f8:	0a 94       	dec	r0
+  fa:	e2 f7       	brpl	.-8      	; 0xf4 <smiley+0x3a>
+  fc:	20 95       	com	r18
+  fe:	24 23       	and	r18, r20
+ 100:	25 b9       	out	0x05, r18	; 5
+	PORTA &= ~(1<<rowPin4);
+ 102:	42 b1       	in	r20, 0x02	; 2
+ 104:	9c 01       	movw	r18, r24
+ 106:	00 90 14 01 	lds	r0, 0x0114
+ 10a:	02 c0       	rjmp	.+4      	; 0x110 <smiley+0x56>
+ 10c:	22 0f       	add	r18, r18
+ 10e:	33 1f       	adc	r19, r19
+ 110:	0a 94       	dec	r0
+ 112:	e2 f7       	brpl	.-8      	; 0x10c <smiley+0x52>
+ 114:	20 95       	com	r18
+ 116:	24 23       	and	r18, r20
+ 118:	22 b9       	out	0x02, r18	; 2
+	PORTB &= ~(1<<rowPin5);
+ 11a:	45 b1       	in	r20, 0x05	; 5
+ 11c:	9c 01       	movw	r18, r24
+ 11e:	00 90 12 01 	lds	r0, 0x0112
+ 122:	02 c0       	rjmp	.+4      	; 0x128 <smiley+0x6e>
+ 124:	22 0f       	add	r18, r18
+ 126:	33 1f       	adc	r19, r19
+ 128:	0a 94       	dec	r0
+ 12a:	e2 f7       	brpl	.-8      	; 0x124 <smiley+0x6a>
+ 12c:	20 95       	com	r18
+ 12e:	24 23       	and	r18, r20
+ 130:	25 b9       	out	0x05, r18	; 5
+	PORTB &= ~(1<<rowPin6);
+ 132:	42 b1       	in	r20, 0x02	; 2
+ 134:	9c 01       	movw	r18, r24
+ 136:	00 90 10 01 	lds	r0, 0x0110
+ 13a:	02 c0       	rjmp	.+4      	; 0x140 <smiley+0x86>
+ 13c:	22 0f       	add	r18, r18
+ 13e:	33 1f       	adc	r19, r19
+ 140:	0a 94       	dec	r0
+ 142:	e2 f7       	brpl	.-8      	; 0x13c <smiley+0x82>
+ 144:	20 95       	com	r18
+ 146:	24 23       	and	r18, r20
+ 148:	22 b9       	out	0x02, r18	; 2
+	PORTB &= ~(1<<rowPin7);
+ 14a:	42 b1       	in	r20, 0x02	; 2
+ 14c:	9c 01       	movw	r18, r24
+ 14e:	00 90 0e 01 	lds	r0, 0x010E
+ 152:	02 c0       	rjmp	.+4      	; 0x158 <smiley+0x9e>
+ 154:	22 0f       	add	r18, r18
+ 156:	33 1f       	adc	r19, r19
+ 158:	0a 94       	dec	r0
+ 15a:	e2 f7       	brpl	.-8      	; 0x154 <smiley+0x9a>
+ 15c:	24 2b       	or	r18, r20
+ 15e:	22 b9       	out	0x02, r18	; 2
+ 160:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin8);  
+ 162:	9c 01       	movw	r18, r24
+ 164:	00 90 0c 01 	lds	r0, 0x010C
+ 168:	02 c0       	rjmp	.+4      	; 0x16e <smiley+0xb4>
+ 16a:	22 0f       	add	r18, r18
+ 16c:	33 1f       	adc	r19, r19
+ 16e:	0a 94       	dec	r0
+ 170:	e2 f7       	brpl	.-8      	; 0x16a <smiley+0xb0>
+ 172:	24 2b       	or	r18, r20
+ 174:	22 b9       	out	0x02, r18	; 2
+ 176:	42 b1       	in	r20, 0x02	; 2
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 178:	9c 01       	movw	r18, r24
+ 17a:	00 90 1e 01 	lds	r0, 0x011E
+ 17e:	02 c0       	rjmp	.+4      	; 0x184 <smiley+0xca>
+ 180:	22 0f       	add	r18, r18
+ 182:	33 1f       	adc	r19, r19
+
+    _delay_us(2000);
+
+//ROW2
+ //Col Low turns LED on
+	PORTA |= (1<<colPin1);
+ 184:	0a 94       	dec	r0
+ 186:	e2 f7       	brpl	.-8      	; 0x180 <smiley+0xc6>
+ 188:	24 2b       	or	r18, r20
+ 18a:	22 b9       	out	0x02, r18	; 2
+ 18c:	42 b1       	in	r20, 0x02	; 2
+ 18e:	9c 01       	movw	r18, r24
+ 190:	00 90 0a 01 	lds	r0, 0x010A
+ 194:	02 c0       	rjmp	.+4      	; 0x19a <smiley+0xe0>
+ 196:	22 0f       	add	r18, r18
+ 198:	33 1f       	adc	r19, r19
+ 19a:	0a 94       	dec	r0
+ 19c:	e2 f7       	brpl	.-8      	; 0x196 <smiley+0xdc>
+	PORTB &= ~(1<<colPin2);
+ 19e:	20 95       	com	r18
+ 1a0:	24 23       	and	r18, r20
+ 1a2:	22 b9       	out	0x02, r18	; 2
+ 1a4:	45 b1       	in	r20, 0x05	; 5
+ 1a6:	9c 01       	movw	r18, r24
+ 1a8:	00 90 08 01 	lds	r0, 0x0108
+ 1ac:	02 c0       	rjmp	.+4      	; 0x1b2 <smiley+0xf8>
+ 1ae:	22 0f       	add	r18, r18
+ 1b0:	33 1f       	adc	r19, r19
+ 1b2:	0a 94       	dec	r0
+ 1b4:	e2 f7       	brpl	.-8      	; 0x1ae <smiley+0xf4>
+	PORTB |= (1<<colPin3);
+ 1b6:	20 95       	com	r18
+ 1b8:	24 23       	and	r18, r20
+ 1ba:	25 b9       	out	0x05, r18	; 5
+ 1bc:	42 b1       	in	r20, 0x02	; 2
+ 1be:	9c 01       	movw	r18, r24
+ 1c0:	00 90 06 01 	lds	r0, 0x0106
+ 1c4:	02 c0       	rjmp	.+4      	; 0x1ca <smiley+0x110>
+ 1c6:	22 0f       	add	r18, r18
+ 1c8:	33 1f       	adc	r19, r19
+ 1ca:	0a 94       	dec	r0
+	PORTA |= (1<<colPin4);
+ 1cc:	e2 f7       	brpl	.-8      	; 0x1c6 <smiley+0x10c>
+ 1ce:	20 95       	com	r18
+ 1d0:	24 23       	and	r18, r20
+ 1d2:	22 b9       	out	0x02, r18	; 2
+ 1d4:	45 b1       	in	r20, 0x05	; 5
+ 1d6:	9c 01       	movw	r18, r24
+ 1d8:	00 90 1c 01 	lds	r0, 0x011C
+ 1dc:	02 c0       	rjmp	.+4      	; 0x1e2 <smiley+0x128>
+ 1de:	22 0f       	add	r18, r18
+ 1e0:	33 1f       	adc	r19, r19
+	PORTB |= (1<<colPin5);
+ 1e2:	0a 94       	dec	r0
+ 1e4:	e2 f7       	brpl	.-8      	; 0x1de <smiley+0x124>
+ 1e6:	20 95       	com	r18
+ 1e8:	24 23       	and	r18, r20
+ 1ea:	25 b9       	out	0x05, r18	; 5
+ 1ec:	45 b1       	in	r20, 0x05	; 5
+ 1ee:	9c 01       	movw	r18, r24
+ 1f0:	00 90 04 01 	lds	r0, 0x0104
+ 1f4:	02 c0       	rjmp	.+4      	; 0x1fa <smiley+0x140>
+ 1f6:	22 0f       	add	r18, r18
+	PORTA |= (1<<colPin6);
+ 1f8:	33 1f       	adc	r19, r19
+ 1fa:	0a 94       	dec	r0
+ 1fc:	e2 f7       	brpl	.-8      	; 0x1f6 <smiley+0x13c>
+ 1fe:	20 95       	com	r18
+ 200:	24 23       	and	r18, r20
+ 202:	25 b9       	out	0x05, r18	; 5
+ 204:	45 b1       	in	r20, 0x05	; 5
+ 206:	9c 01       	movw	r18, r24
+ 208:	00 90 02 01 	lds	r0, 0x0102
+ 20c:	02 c0       	rjmp	.+4      	; 0x212 <smiley+0x158>
+	PORTA &= ~(1<<colPin7);
+ 20e:	22 0f       	add	r18, r18
+ 210:	33 1f       	adc	r19, r19
+ 212:	0a 94       	dec	r0
+ 214:	e2 f7       	brpl	.-8      	; 0x20e <smiley+0x154>
+ 216:	20 95       	com	r18
+ 218:	24 23       	and	r18, r20
+ 21a:	25 b9       	out	0x05, r18	; 5
+ 21c:	25 b1       	in	r18, 0x05	; 5
+ 21e:	00 90 00 01 	lds	r0, 0x0100
+ 222:	02 c0       	rjmp	.+4      	; 0x228 <smiley+0x16e>
+ 224:	88 0f       	add	r24, r24
+	PORTA |= (1<<colPin8);
+ 226:	99 1f       	adc	r25, r25
+ 228:	0a 94       	dec	r0
+ 22a:	e2 f7       	brpl	.-8      	; 0x224 <smiley+0x16a>
+ 22c:	80 95       	com	r24
+ 22e:	82 23       	and	r24, r18
+ 230:	85 b9       	out	0x05, r24	; 5
+ 232:	83 ef       	ldi	r24, 0xF3	; 243
+ 234:	91 e0       	ldi	r25, 0x01	; 1
+ 236:	01 97       	sbiw	r24, 0x01	; 1
+ 238:	f1 f7       	brne	.-4      	; 0x236 <smiley+0x17c>
+ 23a:	00 c0       	rjmp	.+0      	; 0x23c <smiley+0x182>
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ 23c:	00 00       	nop
+ 23e:	42 b1       	in	r20, 0x02	; 2
+ 240:	81 e0       	ldi	r24, 0x01	; 1
+ 242:	90 e0       	ldi	r25, 0x00	; 0
+ 244:	9c 01       	movw	r18, r24
+ 246:	00 90 1a 01 	lds	r0, 0x011A
+ 24a:	02 c0       	rjmp	.+4      	; 0x250 <smiley+0x196>
+ 24c:	22 0f       	add	r18, r18
+ 24e:	33 1f       	adc	r19, r19
+ 250:	0a 94       	dec	r0
+ 252:	e2 f7       	brpl	.-8      	; 0x24c <smiley+0x192>
+	PORTA |= (1<<rowPin2);
+ 254:	24 2b       	or	r18, r20
+ 256:	22 b9       	out	0x02, r18	; 2
+ 258:	45 b1       	in	r20, 0x05	; 5
+ 25a:	9c 01       	movw	r18, r24
+ 25c:	00 90 18 01 	lds	r0, 0x0118
+ 260:	02 c0       	rjmp	.+4      	; 0x266 <smiley+0x1ac>
+ 262:	22 0f       	add	r18, r18
+ 264:	33 1f       	adc	r19, r19
+ 266:	0a 94       	dec	r0
+ 268:	e2 f7       	brpl	.-8      	; 0x262 <smiley+0x1a8>
+	PORTB &= ~(1<<rowPin3);
+ 26a:	20 95       	com	r18
+ 26c:	24 23       	and	r18, r20
+ 26e:	25 b9       	out	0x05, r18	; 5
+ 270:	45 b1       	in	r20, 0x05	; 5
+ 272:	9c 01       	movw	r18, r24
+ 274:	00 90 16 01 	lds	r0, 0x0116
+ 278:	02 c0       	rjmp	.+4      	; 0x27e <smiley+0x1c4>
+ 27a:	22 0f       	add	r18, r18
+ 27c:	33 1f       	adc	r19, r19
+ 27e:	0a 94       	dec	r0
+ 280:	e2 f7       	brpl	.-8      	; 0x27a <smiley+0x1c0>
+	PORTA &= ~(1<<rowPin4);
+ 282:	24 2b       	or	r18, r20
+ 284:	25 b9       	out	0x05, r18	; 5
+ 286:	42 b1       	in	r20, 0x02	; 2
+ 288:	9c 01       	movw	r18, r24
+ 28a:	00 90 14 01 	lds	r0, 0x0114
+ 28e:	02 c0       	rjmp	.+4      	; 0x294 <smiley+0x1da>
+ 290:	22 0f       	add	r18, r18
+ 292:	33 1f       	adc	r19, r19
+ 294:	0a 94       	dec	r0
+ 296:	e2 f7       	brpl	.-8      	; 0x290 <smiley+0x1d6>
+ 298:	24 2b       	or	r18, r20
+	PORTB &= ~(1<<rowPin5);
+ 29a:	22 b9       	out	0x02, r18	; 2
+ 29c:	45 b1       	in	r20, 0x05	; 5
+ 29e:	9c 01       	movw	r18, r24
+ 2a0:	00 90 12 01 	lds	r0, 0x0112
+ 2a4:	02 c0       	rjmp	.+4      	; 0x2aa <smiley+0x1f0>
+ 2a6:	22 0f       	add	r18, r18
+ 2a8:	33 1f       	adc	r19, r19
+ 2aa:	0a 94       	dec	r0
+ 2ac:	e2 f7       	brpl	.-8      	; 0x2a6 <smiley+0x1ec>
+ 2ae:	24 2b       	or	r18, r20
+ 2b0:	25 b9       	out	0x05, r18	; 5
+	PORTB &= ~(1<<rowPin6);
+ 2b2:	42 b1       	in	r20, 0x02	; 2
+ 2b4:	9c 01       	movw	r18, r24
+ 2b6:	00 90 10 01 	lds	r0, 0x0110
+ 2ba:	02 c0       	rjmp	.+4      	; 0x2c0 <smiley+0x206>
+ 2bc:	22 0f       	add	r18, r18
+ 2be:	33 1f       	adc	r19, r19
+ 2c0:	0a 94       	dec	r0
+ 2c2:	e2 f7       	brpl	.-8      	; 0x2bc <smiley+0x202>
+ 2c4:	24 2b       	or	r18, r20
+ 2c6:	22 b9       	out	0x02, r18	; 2
+ 2c8:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin7);
+ 2ca:	9c 01       	movw	r18, r24
+ 2cc:	00 90 0e 01 	lds	r0, 0x010E
+ 2d0:	02 c0       	rjmp	.+4      	; 0x2d6 <smiley+0x21c>
+ 2d2:	22 0f       	add	r18, r18
+ 2d4:	33 1f       	adc	r19, r19
+ 2d6:	0a 94       	dec	r0
+ 2d8:	e2 f7       	brpl	.-8      	; 0x2d2 <smiley+0x218>
+ 2da:	20 95       	com	r18
+ 2dc:	24 23       	and	r18, r20
+ 2de:	22 b9       	out	0x02, r18	; 2
+ 2e0:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin8);  
+ 2e2:	9c 01       	movw	r18, r24
+ 2e4:	00 90 0c 01 	lds	r0, 0x010C
+ 2e8:	02 c0       	rjmp	.+4      	; 0x2ee <smiley+0x234>
+ 2ea:	22 0f       	add	r18, r18
+ 2ec:	33 1f       	adc	r19, r19
+ 2ee:	0a 94       	dec	r0
+ 2f0:	e2 f7       	brpl	.-8      	; 0x2ea <smiley+0x230>
+ 2f2:	24 2b       	or	r18, r20
+ 2f4:	22 b9       	out	0x02, r18	; 2
+ 2f6:	42 b1       	in	r20, 0x02	; 2
+ 2f8:	9c 01       	movw	r18, r24
+ 2fa:	00 90 1e 01 	lds	r0, 0x011E
+ 2fe:	02 c0       	rjmp	.+4      	; 0x304 <smiley+0x24a>
+ 300:	22 0f       	add	r18, r18
+ 302:	33 1f       	adc	r19, r19
+
+    _delay_us(2000);
+	
+//ROW3
+ //Col Low turns LED on
+	PORTA &= ~(1<<colPin1);
+ 304:	0a 94       	dec	r0
+ 306:	e2 f7       	brpl	.-8      	; 0x300 <smiley+0x246>
+ 308:	20 95       	com	r18
+ 30a:	24 23       	and	r18, r20
+ 30c:	22 b9       	out	0x02, r18	; 2
+ 30e:	42 b1       	in	r20, 0x02	; 2
+ 310:	9c 01       	movw	r18, r24
+ 312:	00 90 0a 01 	lds	r0, 0x010A
+ 316:	02 c0       	rjmp	.+4      	; 0x31c <smiley+0x262>
+ 318:	22 0f       	add	r18, r18
+ 31a:	33 1f       	adc	r19, r19
+ 31c:	0a 94       	dec	r0
+ 31e:	e2 f7       	brpl	.-8      	; 0x318 <smiley+0x25e>
+	PORTB |= (1<<colPin2);
+ 320:	24 2b       	or	r18, r20
+ 322:	22 b9       	out	0x02, r18	; 2
+ 324:	45 b1       	in	r20, 0x05	; 5
+ 326:	9c 01       	movw	r18, r24
+ 328:	00 90 08 01 	lds	r0, 0x0108
+ 32c:	02 c0       	rjmp	.+4      	; 0x332 <smiley+0x278>
+ 32e:	22 0f       	add	r18, r18
+ 330:	33 1f       	adc	r19, r19
+ 332:	0a 94       	dec	r0
+ 334:	e2 f7       	brpl	.-8      	; 0x32e <smiley+0x274>
+	PORTB &= ~(1<<colPin3);
+ 336:	20 95       	com	r18
+ 338:	24 23       	and	r18, r20
+ 33a:	25 b9       	out	0x05, r18	; 5
+ 33c:	42 b1       	in	r20, 0x02	; 2
+ 33e:	9c 01       	movw	r18, r24
+ 340:	00 90 06 01 	lds	r0, 0x0106
+ 344:	02 c0       	rjmp	.+4      	; 0x34a <smiley+0x290>
+ 346:	22 0f       	add	r18, r18
+ 348:	33 1f       	adc	r19, r19
+ 34a:	0a 94       	dec	r0
+ 34c:	e2 f7       	brpl	.-8      	; 0x346 <smiley+0x28c>
+	PORTA |= (1<<colPin4);
+ 34e:	20 95       	com	r18
+ 350:	24 23       	and	r18, r20
+ 352:	22 b9       	out	0x02, r18	; 2
+ 354:	45 b1       	in	r20, 0x05	; 5
+ 356:	9c 01       	movw	r18, r24
+ 358:	00 90 1c 01 	lds	r0, 0x011C
+ 35c:	02 c0       	rjmp	.+4      	; 0x362 <smiley+0x2a8>
+ 35e:	22 0f       	add	r18, r18
+ 360:	33 1f       	adc	r19, r19
+ 362:	0a 94       	dec	r0
+	PORTB |= (1<<colPin5);
+ 364:	e2 f7       	brpl	.-8      	; 0x35e <smiley+0x2a4>
+ 366:	20 95       	com	r18
+ 368:	24 23       	and	r18, r20
+ 36a:	25 b9       	out	0x05, r18	; 5
+ 36c:	45 b1       	in	r20, 0x05	; 5
+ 36e:	9c 01       	movw	r18, r24
+ 370:	00 90 04 01 	lds	r0, 0x0104
+ 374:	02 c0       	rjmp	.+4      	; 0x37a <smiley+0x2c0>
+ 376:	22 0f       	add	r18, r18
+ 378:	33 1f       	adc	r19, r19
+	PORTA &= ~(1<<colPin6);
+ 37a:	0a 94       	dec	r0
+ 37c:	e2 f7       	brpl	.-8      	; 0x376 <smiley+0x2bc>
+ 37e:	20 95       	com	r18
+ 380:	24 23       	and	r18, r20
+ 382:	25 b9       	out	0x05, r18	; 5
+ 384:	45 b1       	in	r20, 0x05	; 5
+ 386:	9c 01       	movw	r18, r24
+ 388:	00 90 02 01 	lds	r0, 0x0102
+ 38c:	02 c0       	rjmp	.+4      	; 0x392 <smiley+0x2d8>
+ 38e:	22 0f       	add	r18, r18
+ 390:	33 1f       	adc	r19, r19
+	PORTA |= (1<<colPin7);
+ 392:	0a 94       	dec	r0
+ 394:	e2 f7       	brpl	.-8      	; 0x38e <smiley+0x2d4>
+ 396:	20 95       	com	r18
+ 398:	24 23       	and	r18, r20
+ 39a:	25 b9       	out	0x05, r18	; 5
+ 39c:	25 b1       	in	r18, 0x05	; 5
+ 39e:	00 90 00 01 	lds	r0, 0x0100
+ 3a2:	02 c0       	rjmp	.+4      	; 0x3a8 <smiley+0x2ee>
+ 3a4:	88 0f       	add	r24, r24
+ 3a6:	99 1f       	adc	r25, r25
+	PORTA &= ~(1<<colPin8);
+ 3a8:	0a 94       	dec	r0
+ 3aa:	e2 f7       	brpl	.-8      	; 0x3a4 <smiley+0x2ea>
+ 3ac:	80 95       	com	r24
+ 3ae:	82 23       	and	r24, r18
+ 3b0:	85 b9       	out	0x05, r24	; 5
+ 3b2:	83 ef       	ldi	r24, 0xF3	; 243
+ 3b4:	91 e0       	ldi	r25, 0x01	; 1
+ 3b6:	01 97       	sbiw	r24, 0x01	; 1
+ 3b8:	f1 f7       	brne	.-4      	; 0x3b6 <smiley+0x2fc>
+ 3ba:	00 c0       	rjmp	.+0      	; 0x3bc <smiley+0x302>
+ 3bc:	00 00       	nop
+ 3be:	42 b1       	in	r20, 0x02	; 2
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ 3c0:	81 e0       	ldi	r24, 0x01	; 1
+ 3c2:	90 e0       	ldi	r25, 0x00	; 0
+ 3c4:	9c 01       	movw	r18, r24
+ 3c6:	00 90 1a 01 	lds	r0, 0x011A
+ 3ca:	02 c0       	rjmp	.+4      	; 0x3d0 <smiley+0x316>
+ 3cc:	22 0f       	add	r18, r18
+ 3ce:	33 1f       	adc	r19, r19
+ 3d0:	0a 94       	dec	r0
+ 3d2:	e2 f7       	brpl	.-8      	; 0x3cc <smiley+0x312>
+ 3d4:	20 95       	com	r18
+ 3d6:	24 23       	and	r18, r20
+	PORTA &= ~(1<<rowPin2);
+ 3d8:	22 b9       	out	0x02, r18	; 2
+ 3da:	45 b1       	in	r20, 0x05	; 5
+ 3dc:	9c 01       	movw	r18, r24
+ 3de:	00 90 18 01 	lds	r0, 0x0118
+ 3e2:	02 c0       	rjmp	.+4      	; 0x3e8 <smiley+0x32e>
+ 3e4:	22 0f       	add	r18, r18
+ 3e6:	33 1f       	adc	r19, r19
+ 3e8:	0a 94       	dec	r0
+ 3ea:	e2 f7       	brpl	.-8      	; 0x3e4 <smiley+0x32a>
+ 3ec:	24 2b       	or	r18, r20
+ 3ee:	25 b9       	out	0x05, r18	; 5
+	PORTB |= (1<<rowPin3);
+ 3f0:	45 b1       	in	r20, 0x05	; 5
+ 3f2:	9c 01       	movw	r18, r24
+ 3f4:	00 90 16 01 	lds	r0, 0x0116
+ 3f8:	02 c0       	rjmp	.+4      	; 0x3fe <smiley+0x344>
+ 3fa:	22 0f       	add	r18, r18
+ 3fc:	33 1f       	adc	r19, r19
+ 3fe:	0a 94       	dec	r0
+ 400:	e2 f7       	brpl	.-8      	; 0x3fa <smiley+0x340>
+ 402:	20 95       	com	r18
+ 404:	24 23       	and	r18, r20
+	PORTA &= ~(1<<rowPin4);
+ 406:	25 b9       	out	0x05, r18	; 5
+ 408:	42 b1       	in	r20, 0x02	; 2
+ 40a:	9c 01       	movw	r18, r24
+ 40c:	00 90 14 01 	lds	r0, 0x0114
+ 410:	02 c0       	rjmp	.+4      	; 0x416 <smiley+0x35c>
+ 412:	22 0f       	add	r18, r18
+ 414:	33 1f       	adc	r19, r19
+ 416:	0a 94       	dec	r0
+ 418:	e2 f7       	brpl	.-8      	; 0x412 <smiley+0x358>
+ 41a:	24 2b       	or	r18, r20
+ 41c:	22 b9       	out	0x02, r18	; 2
+	PORTB &= ~(1<<rowPin5);
+ 41e:	45 b1       	in	r20, 0x05	; 5
+ 420:	9c 01       	movw	r18, r24
+ 422:	00 90 12 01 	lds	r0, 0x0112
+ 426:	02 c0       	rjmp	.+4      	; 0x42c <smiley+0x372>
+ 428:	22 0f       	add	r18, r18
+ 42a:	33 1f       	adc	r19, r19
+ 42c:	0a 94       	dec	r0
+ 42e:	e2 f7       	brpl	.-8      	; 0x428 <smiley+0x36e>
+ 430:	24 2b       	or	r18, r20
+ 432:	25 b9       	out	0x05, r18	; 5
+ 434:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin6);
+ 436:	9c 01       	movw	r18, r24
+ 438:	00 90 10 01 	lds	r0, 0x0110
+ 43c:	02 c0       	rjmp	.+4      	; 0x442 <smiley+0x388>
+ 43e:	22 0f       	add	r18, r18
+ 440:	33 1f       	adc	r19, r19
+ 442:	0a 94       	dec	r0
+ 444:	e2 f7       	brpl	.-8      	; 0x43e <smiley+0x384>
+ 446:	20 95       	com	r18
+ 448:	24 23       	and	r18, r20
+ 44a:	22 b9       	out	0x02, r18	; 2
+ 44c:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin7);
+ 44e:	9c 01       	movw	r18, r24
+ 450:	00 90 0e 01 	lds	r0, 0x010E
+ 454:	02 c0       	rjmp	.+4      	; 0x45a <smiley+0x3a0>
+ 456:	22 0f       	add	r18, r18
+ 458:	33 1f       	adc	r19, r19
+ 45a:	0a 94       	dec	r0
+ 45c:	e2 f7       	brpl	.-8      	; 0x456 <smiley+0x39c>
+ 45e:	24 2b       	or	r18, r20
+ 460:	22 b9       	out	0x02, r18	; 2
+ 462:	42 b1       	in	r20, 0x02	; 2
+ 464:	9c 01       	movw	r18, r24
+	PORTB &= ~(1<<rowPin8);  
+ 466:	00 90 0c 01 	lds	r0, 0x010C
+ 46a:	02 c0       	rjmp	.+4      	; 0x470 <smiley+0x3b6>
+ 46c:	22 0f       	add	r18, r18
+ 46e:	33 1f       	adc	r19, r19
+ 470:	0a 94       	dec	r0
+ 472:	e2 f7       	brpl	.-8      	; 0x46c <smiley+0x3b2>
+ 474:	20 95       	com	r18
+ 476:	24 23       	and	r18, r20
+ 478:	22 b9       	out	0x02, r18	; 2
+ 47a:	42 b1       	in	r20, 0x02	; 2
+ 47c:	9c 01       	movw	r18, r24
+ 47e:	00 90 1e 01 	lds	r0, 0x011E
+ 482:	02 c0       	rjmp	.+4      	; 0x488 <smiley+0x3ce>
+ 484:	22 0f       	add	r18, r18
+ 486:	33 1f       	adc	r19, r19
+
+    _delay_us(2000);
+	
+//ROW4
+ //Col Low turns LED on
+	PORTA &= ~(1<<colPin1);
+ 488:	0a 94       	dec	r0
+ 48a:	e2 f7       	brpl	.-8      	; 0x484 <smiley+0x3ca>
+ 48c:	20 95       	com	r18
+ 48e:	24 23       	and	r18, r20
+ 490:	22 b9       	out	0x02, r18	; 2
+ 492:	42 b1       	in	r20, 0x02	; 2
+ 494:	9c 01       	movw	r18, r24
+ 496:	00 90 0a 01 	lds	r0, 0x010A
+ 49a:	02 c0       	rjmp	.+4      	; 0x4a0 <smiley+0x3e6>
+ 49c:	22 0f       	add	r18, r18
+ 49e:	33 1f       	adc	r19, r19
+ 4a0:	0a 94       	dec	r0
+ 4a2:	e2 f7       	brpl	.-8      	; 0x49c <smiley+0x3e2>
+	PORTB |= (1<<colPin2);
+ 4a4:	20 95       	com	r18
+ 4a6:	24 23       	and	r18, r20
+ 4a8:	22 b9       	out	0x02, r18	; 2
+ 4aa:	45 b1       	in	r20, 0x05	; 5
+ 4ac:	9c 01       	movw	r18, r24
+ 4ae:	00 90 08 01 	lds	r0, 0x0108
+ 4b2:	02 c0       	rjmp	.+4      	; 0x4b8 <smiley+0x3fe>
+ 4b4:	22 0f       	add	r18, r18
+ 4b6:	33 1f       	adc	r19, r19
+ 4b8:	0a 94       	dec	r0
+	PORTB |= (1<<colPin3);
+ 4ba:	e2 f7       	brpl	.-8      	; 0x4b4 <smiley+0x3fa>
+ 4bc:	24 2b       	or	r18, r20
+ 4be:	25 b9       	out	0x05, r18	; 5
+ 4c0:	42 b1       	in	r20, 0x02	; 2
+ 4c2:	9c 01       	movw	r18, r24
+ 4c4:	00 90 06 01 	lds	r0, 0x0106
+ 4c8:	02 c0       	rjmp	.+4      	; 0x4ce <smiley+0x414>
+ 4ca:	22 0f       	add	r18, r18
+ 4cc:	33 1f       	adc	r19, r19
+ 4ce:	0a 94       	dec	r0
+	PORTA |= (1<<colPin4);
+ 4d0:	e2 f7       	brpl	.-8      	; 0x4ca <smiley+0x410>
+ 4d2:	20 95       	com	r18
+ 4d4:	24 23       	and	r18, r20
+ 4d6:	22 b9       	out	0x02, r18	; 2
+ 4d8:	45 b1       	in	r20, 0x05	; 5
+ 4da:	9c 01       	movw	r18, r24
+ 4dc:	00 90 1c 01 	lds	r0, 0x011C
+ 4e0:	02 c0       	rjmp	.+4      	; 0x4e6 <smiley+0x42c>
+ 4e2:	22 0f       	add	r18, r18
+ 4e4:	33 1f       	adc	r19, r19
+	PORTB |= (1<<colPin5);
+ 4e6:	0a 94       	dec	r0
+ 4e8:	e2 f7       	brpl	.-8      	; 0x4e2 <smiley+0x428>
+ 4ea:	20 95       	com	r18
+ 4ec:	24 23       	and	r18, r20
+ 4ee:	25 b9       	out	0x05, r18	; 5
+ 4f0:	45 b1       	in	r20, 0x05	; 5
+ 4f2:	9c 01       	movw	r18, r24
+ 4f4:	00 90 04 01 	lds	r0, 0x0104
+ 4f8:	02 c0       	rjmp	.+4      	; 0x4fe <smiley+0x444>
+ 4fa:	22 0f       	add	r18, r18
+	PORTA |= (1<<colPin6);
+ 4fc:	33 1f       	adc	r19, r19
+ 4fe:	0a 94       	dec	r0
+ 500:	e2 f7       	brpl	.-8      	; 0x4fa <smiley+0x440>
+ 502:	20 95       	com	r18
+ 504:	24 23       	and	r18, r20
+ 506:	25 b9       	out	0x05, r18	; 5
+ 508:	45 b1       	in	r20, 0x05	; 5
+ 50a:	9c 01       	movw	r18, r24
+ 50c:	00 90 02 01 	lds	r0, 0x0102
+ 510:	02 c0       	rjmp	.+4      	; 0x516 <smiley+0x45c>
+	PORTA |= (1<<colPin7);
+ 512:	22 0f       	add	r18, r18
+ 514:	33 1f       	adc	r19, r19
+ 516:	0a 94       	dec	r0
+ 518:	e2 f7       	brpl	.-8      	; 0x512 <smiley+0x458>
+ 51a:	20 95       	com	r18
+ 51c:	24 23       	and	r18, r20
+ 51e:	25 b9       	out	0x05, r18	; 5
+ 520:	25 b1       	in	r18, 0x05	; 5
+ 522:	00 90 00 01 	lds	r0, 0x0100
+ 526:	02 c0       	rjmp	.+4      	; 0x52c <smiley+0x472>
+	PORTA &= ~(1<<colPin8);
+ 528:	88 0f       	add	r24, r24
+ 52a:	99 1f       	adc	r25, r25
+ 52c:	0a 94       	dec	r0
+ 52e:	e2 f7       	brpl	.-8      	; 0x528 <smiley+0x46e>
+ 530:	80 95       	com	r24
+ 532:	82 23       	and	r24, r18
+ 534:	85 b9       	out	0x05, r24	; 5
+ 536:	83 ef       	ldi	r24, 0xF3	; 243
+ 538:	91 e0       	ldi	r25, 0x01	; 1
+ 53a:	01 97       	sbiw	r24, 0x01	; 1
+ 53c:	f1 f7       	brne	.-4      	; 0x53a <smiley+0x480>
+ 53e:	00 c0       	rjmp	.+0      	; 0x540 <smiley+0x486>
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ 540:	00 00       	nop
+ 542:	42 b1       	in	r20, 0x02	; 2
+ 544:	81 e0       	ldi	r24, 0x01	; 1
+ 546:	90 e0       	ldi	r25, 0x00	; 0
+ 548:	9c 01       	movw	r18, r24
+ 54a:	00 90 1a 01 	lds	r0, 0x011A
+ 54e:	02 c0       	rjmp	.+4      	; 0x554 <smiley+0x49a>
+ 550:	22 0f       	add	r18, r18
+ 552:	33 1f       	adc	r19, r19
+ 554:	0a 94       	dec	r0
+ 556:	e2 f7       	brpl	.-8      	; 0x550 <smiley+0x496>
+	PORTA &= ~(1<<rowPin2);
+ 558:	20 95       	com	r18
+ 55a:	24 23       	and	r18, r20
+ 55c:	22 b9       	out	0x02, r18	; 2
+ 55e:	45 b1       	in	r20, 0x05	; 5
+ 560:	9c 01       	movw	r18, r24
+ 562:	00 90 18 01 	lds	r0, 0x0118
+ 566:	02 c0       	rjmp	.+4      	; 0x56c <smiley+0x4b2>
+ 568:	22 0f       	add	r18, r18
+ 56a:	33 1f       	adc	r19, r19
+ 56c:	0a 94       	dec	r0
+ 56e:	e2 f7       	brpl	.-8      	; 0x568 <smiley+0x4ae>
+	PORTB &= ~(1<<rowPin3);
+ 570:	24 2b       	or	r18, r20
+ 572:	25 b9       	out	0x05, r18	; 5
+ 574:	45 b1       	in	r20, 0x05	; 5
+ 576:	9c 01       	movw	r18, r24
+ 578:	00 90 16 01 	lds	r0, 0x0116
+ 57c:	02 c0       	rjmp	.+4      	; 0x582 <smiley+0x4c8>
+ 57e:	22 0f       	add	r18, r18
+ 580:	33 1f       	adc	r19, r19
+ 582:	0a 94       	dec	r0
+ 584:	e2 f7       	brpl	.-8      	; 0x57e <smiley+0x4c4>
+ 586:	24 2b       	or	r18, r20
+	PORTA |= (1<<rowPin4);
+ 588:	25 b9       	out	0x05, r18	; 5
+ 58a:	42 b1       	in	r20, 0x02	; 2
+ 58c:	9c 01       	movw	r18, r24
+ 58e:	00 90 14 01 	lds	r0, 0x0114
+ 592:	02 c0       	rjmp	.+4      	; 0x598 <smiley+0x4de>
+ 594:	22 0f       	add	r18, r18
+ 596:	33 1f       	adc	r19, r19
+ 598:	0a 94       	dec	r0
+ 59a:	e2 f7       	brpl	.-8      	; 0x594 <smiley+0x4da>
+ 59c:	24 2b       	or	r18, r20
+	PORTB &= ~(1<<rowPin5);
+ 59e:	22 b9       	out	0x02, r18	; 2
+ 5a0:	45 b1       	in	r20, 0x05	; 5
+ 5a2:	9c 01       	movw	r18, r24
+ 5a4:	00 90 12 01 	lds	r0, 0x0112
+ 5a8:	02 c0       	rjmp	.+4      	; 0x5ae <smiley+0x4f4>
+ 5aa:	22 0f       	add	r18, r18
+ 5ac:	33 1f       	adc	r19, r19
+ 5ae:	0a 94       	dec	r0
+ 5b0:	e2 f7       	brpl	.-8      	; 0x5aa <smiley+0x4f0>
+ 5b2:	24 2b       	or	r18, r20
+ 5b4:	25 b9       	out	0x05, r18	; 5
+	PORTB &= ~(1<<rowPin6);
+ 5b6:	42 b1       	in	r20, 0x02	; 2
+ 5b8:	9c 01       	movw	r18, r24
+ 5ba:	00 90 10 01 	lds	r0, 0x0110
+ 5be:	02 c0       	rjmp	.+4      	; 0x5c4 <smiley+0x50a>
+ 5c0:	22 0f       	add	r18, r18
+ 5c2:	33 1f       	adc	r19, r19
+ 5c4:	0a 94       	dec	r0
+ 5c6:	e2 f7       	brpl	.-8      	; 0x5c0 <smiley+0x506>
+ 5c8:	24 2b       	or	r18, r20
+ 5ca:	22 b9       	out	0x02, r18	; 2
+ 5cc:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin7);
+ 5ce:	9c 01       	movw	r18, r24
+ 5d0:	00 90 0e 01 	lds	r0, 0x010E
+ 5d4:	02 c0       	rjmp	.+4      	; 0x5da <smiley+0x520>
+ 5d6:	22 0f       	add	r18, r18
+ 5d8:	33 1f       	adc	r19, r19
+ 5da:	0a 94       	dec	r0
+ 5dc:	e2 f7       	brpl	.-8      	; 0x5d6 <smiley+0x51c>
+ 5de:	24 2b       	or	r18, r20
+ 5e0:	22 b9       	out	0x02, r18	; 2
+ 5e2:	42 b1       	in	r20, 0x02	; 2
+ 5e4:	9c 01       	movw	r18, r24
+	PORTB &= ~(1<<rowPin8);  
+ 5e6:	00 90 0c 01 	lds	r0, 0x010C
+ 5ea:	02 c0       	rjmp	.+4      	; 0x5f0 <smiley+0x536>
+ 5ec:	22 0f       	add	r18, r18
+ 5ee:	33 1f       	adc	r19, r19
+ 5f0:	0a 94       	dec	r0
+ 5f2:	e2 f7       	brpl	.-8      	; 0x5ec <smiley+0x532>
+ 5f4:	20 95       	com	r18
+ 5f6:	24 23       	and	r18, r20
+ 5f8:	22 b9       	out	0x02, r18	; 2
+ 5fa:	42 b1       	in	r20, 0x02	; 2
+ 5fc:	9c 01       	movw	r18, r24
+ 5fe:	00 90 1e 01 	lds	r0, 0x011E
+ 602:	02 c0       	rjmp	.+4      	; 0x608 <smiley+0x54e>
+ 604:	22 0f       	add	r18, r18
+ 606:	33 1f       	adc	r19, r19
+
+    _delay_us(2000);
+	
+//ROW5
+ //Col Low turns LED on
+	PORTA &= ~(1<<colPin1);
+ 608:	0a 94       	dec	r0
+ 60a:	e2 f7       	brpl	.-8      	; 0x604 <smiley+0x54a>
+ 60c:	20 95       	com	r18
+ 60e:	24 23       	and	r18, r20
+ 610:	22 b9       	out	0x02, r18	; 2
+ 612:	42 b1       	in	r20, 0x02	; 2
+ 614:	9c 01       	movw	r18, r24
+ 616:	00 90 0a 01 	lds	r0, 0x010A
+ 61a:	02 c0       	rjmp	.+4      	; 0x620 <smiley+0x566>
+ 61c:	22 0f       	add	r18, r18
+ 61e:	33 1f       	adc	r19, r19
+ 620:	0a 94       	dec	r0
+ 622:	e2 f7       	brpl	.-8      	; 0x61c <smiley+0x562>
+	PORTB |= (1<<colPin2);
+ 624:	20 95       	com	r18
+ 626:	24 23       	and	r18, r20
+ 628:	22 b9       	out	0x02, r18	; 2
+ 62a:	45 b1       	in	r20, 0x05	; 5
+ 62c:	9c 01       	movw	r18, r24
+ 62e:	00 90 08 01 	lds	r0, 0x0108
+ 632:	02 c0       	rjmp	.+4      	; 0x638 <smiley+0x57e>
+ 634:	22 0f       	add	r18, r18
+ 636:	33 1f       	adc	r19, r19
+ 638:	0a 94       	dec	r0
+	PORTB |= (1<<colPin3);
+ 63a:	e2 f7       	brpl	.-8      	; 0x634 <smiley+0x57a>
+ 63c:	20 95       	com	r18
+ 63e:	24 23       	and	r18, r20
+ 640:	25 b9       	out	0x05, r18	; 5
+ 642:	42 b1       	in	r20, 0x02	; 2
+ 644:	9c 01       	movw	r18, r24
+ 646:	00 90 06 01 	lds	r0, 0x0106
+ 64a:	02 c0       	rjmp	.+4      	; 0x650 <smiley+0x596>
+ 64c:	22 0f       	add	r18, r18
+ 64e:	33 1f       	adc	r19, r19
+	PORTA |= (1<<colPin4);
+ 650:	0a 94       	dec	r0
+ 652:	e2 f7       	brpl	.-8      	; 0x64c <smiley+0x592>
+ 654:	24 2b       	or	r18, r20
+ 656:	22 b9       	out	0x02, r18	; 2
+ 658:	45 b1       	in	r20, 0x05	; 5
+ 65a:	9c 01       	movw	r18, r24
+ 65c:	00 90 1c 01 	lds	r0, 0x011C
+ 660:	02 c0       	rjmp	.+4      	; 0x666 <smiley+0x5ac>
+ 662:	22 0f       	add	r18, r18
+ 664:	33 1f       	adc	r19, r19
+	PORTB |= (1<<colPin5);
+ 666:	0a 94       	dec	r0
+ 668:	e2 f7       	brpl	.-8      	; 0x662 <smiley+0x5a8>
+ 66a:	20 95       	com	r18
+ 66c:	24 23       	and	r18, r20
+ 66e:	25 b9       	out	0x05, r18	; 5
+ 670:	45 b1       	in	r20, 0x05	; 5
+ 672:	9c 01       	movw	r18, r24
+ 674:	00 90 04 01 	lds	r0, 0x0104
+ 678:	02 c0       	rjmp	.+4      	; 0x67e <smiley+0x5c4>
+ 67a:	22 0f       	add	r18, r18
+	PORTA |= (1<<colPin6);
+ 67c:	33 1f       	adc	r19, r19
+ 67e:	0a 94       	dec	r0
+ 680:	e2 f7       	brpl	.-8      	; 0x67a <smiley+0x5c0>
+ 682:	20 95       	com	r18
+ 684:	24 23       	and	r18, r20
+ 686:	25 b9       	out	0x05, r18	; 5
+ 688:	45 b1       	in	r20, 0x05	; 5
+ 68a:	9c 01       	movw	r18, r24
+ 68c:	00 90 02 01 	lds	r0, 0x0102
+ 690:	02 c0       	rjmp	.+4      	; 0x696 <smiley+0x5dc>
+	PORTA |= (1<<colPin7);
+ 692:	22 0f       	add	r18, r18
+ 694:	33 1f       	adc	r19, r19
+ 696:	0a 94       	dec	r0
+ 698:	e2 f7       	brpl	.-8      	; 0x692 <smiley+0x5d8>
+ 69a:	20 95       	com	r18
+ 69c:	24 23       	and	r18, r20
+ 69e:	25 b9       	out	0x05, r18	; 5
+ 6a0:	25 b1       	in	r18, 0x05	; 5
+ 6a2:	00 90 00 01 	lds	r0, 0x0100
+ 6a6:	02 c0       	rjmp	.+4      	; 0x6ac <smiley+0x5f2>
+	PORTA &= ~(1<<colPin8);
+ 6a8:	88 0f       	add	r24, r24
+ 6aa:	99 1f       	adc	r25, r25
+ 6ac:	0a 94       	dec	r0
+ 6ae:	e2 f7       	brpl	.-8      	; 0x6a8 <smiley+0x5ee>
+ 6b0:	80 95       	com	r24
+ 6b2:	82 23       	and	r24, r18
+ 6b4:	85 b9       	out	0x05, r24	; 5
+ 6b6:	83 ef       	ldi	r24, 0xF3	; 243
+ 6b8:	91 e0       	ldi	r25, 0x01	; 1
+ 6ba:	01 97       	sbiw	r24, 0x01	; 1
+ 6bc:	f1 f7       	brne	.-4      	; 0x6ba <smiley+0x600>
+ 6be:	00 c0       	rjmp	.+0      	; 0x6c0 <smiley+0x606>
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ 6c0:	00 00       	nop
+ 6c2:	42 b1       	in	r20, 0x02	; 2
+ 6c4:	81 e0       	ldi	r24, 0x01	; 1
+ 6c6:	90 e0       	ldi	r25, 0x00	; 0
+ 6c8:	9c 01       	movw	r18, r24
+ 6ca:	00 90 1a 01 	lds	r0, 0x011A
+ 6ce:	02 c0       	rjmp	.+4      	; 0x6d4 <smiley+0x61a>
+ 6d0:	22 0f       	add	r18, r18
+ 6d2:	33 1f       	adc	r19, r19
+ 6d4:	0a 94       	dec	r0
+ 6d6:	e2 f7       	brpl	.-8      	; 0x6d0 <smiley+0x616>
+	PORTA &= ~(1<<rowPin2);
+ 6d8:	20 95       	com	r18
+ 6da:	24 23       	and	r18, r20
+ 6dc:	22 b9       	out	0x02, r18	; 2
+ 6de:	45 b1       	in	r20, 0x05	; 5
+ 6e0:	9c 01       	movw	r18, r24
+ 6e2:	00 90 18 01 	lds	r0, 0x0118
+ 6e6:	02 c0       	rjmp	.+4      	; 0x6ec <smiley+0x632>
+ 6e8:	22 0f       	add	r18, r18
+ 6ea:	33 1f       	adc	r19, r19
+ 6ec:	0a 94       	dec	r0
+ 6ee:	e2 f7       	brpl	.-8      	; 0x6e8 <smiley+0x62e>
+	PORTB &= ~(1<<rowPin3);
+ 6f0:	24 2b       	or	r18, r20
+ 6f2:	25 b9       	out	0x05, r18	; 5
+ 6f4:	45 b1       	in	r20, 0x05	; 5
+ 6f6:	9c 01       	movw	r18, r24
+ 6f8:	00 90 16 01 	lds	r0, 0x0116
+ 6fc:	02 c0       	rjmp	.+4      	; 0x702 <smiley+0x648>
+ 6fe:	22 0f       	add	r18, r18
+ 700:	33 1f       	adc	r19, r19
+ 702:	0a 94       	dec	r0
+ 704:	e2 f7       	brpl	.-8      	; 0x6fe <smiley+0x644>
+ 706:	20 95       	com	r18
+	PORTA &= ~(1<<rowPin4);
+ 708:	24 23       	and	r18, r20
+ 70a:	25 b9       	out	0x05, r18	; 5
+ 70c:	42 b1       	in	r20, 0x02	; 2
+ 70e:	9c 01       	movw	r18, r24
+ 710:	00 90 14 01 	lds	r0, 0x0114
+ 714:	02 c0       	rjmp	.+4      	; 0x71a <smiley+0x660>
+ 716:	22 0f       	add	r18, r18
+ 718:	33 1f       	adc	r19, r19
+ 71a:	0a 94       	dec	r0
+ 71c:	e2 f7       	brpl	.-8      	; 0x716 <smiley+0x65c>
+ 71e:	24 2b       	or	r18, r20
+	PORTB |= (1<<rowPin5);
+ 720:	22 b9       	out	0x02, r18	; 2
+ 722:	45 b1       	in	r20, 0x05	; 5
+ 724:	9c 01       	movw	r18, r24
+ 726:	00 90 12 01 	lds	r0, 0x0112
+ 72a:	02 c0       	rjmp	.+4      	; 0x730 <smiley+0x676>
+ 72c:	22 0f       	add	r18, r18
+ 72e:	33 1f       	adc	r19, r19
+ 730:	0a 94       	dec	r0
+ 732:	e2 f7       	brpl	.-8      	; 0x72c <smiley+0x672>
+ 734:	24 2b       	or	r18, r20
+	PORTB &= ~(1<<rowPin6);
+ 736:	25 b9       	out	0x05, r18	; 5
+ 738:	42 b1       	in	r20, 0x02	; 2
+ 73a:	9c 01       	movw	r18, r24
+ 73c:	00 90 10 01 	lds	r0, 0x0110
+ 740:	02 c0       	rjmp	.+4      	; 0x746 <smiley+0x68c>
+ 742:	22 0f       	add	r18, r18
+ 744:	33 1f       	adc	r19, r19
+ 746:	0a 94       	dec	r0
+ 748:	e2 f7       	brpl	.-8      	; 0x742 <smiley+0x688>
+ 74a:	20 95       	com	r18
+ 74c:	24 23       	and	r18, r20
+	PORTB &= ~(1<<rowPin7);
+ 74e:	22 b9       	out	0x02, r18	; 2
+ 750:	42 b1       	in	r20, 0x02	; 2
+ 752:	9c 01       	movw	r18, r24
+ 754:	00 90 0e 01 	lds	r0, 0x010E
+ 758:	02 c0       	rjmp	.+4      	; 0x75e <smiley+0x6a4>
+ 75a:	22 0f       	add	r18, r18
+ 75c:	33 1f       	adc	r19, r19
+ 75e:	0a 94       	dec	r0
+ 760:	e2 f7       	brpl	.-8      	; 0x75a <smiley+0x6a0>
+ 762:	24 2b       	or	r18, r20
+ 764:	22 b9       	out	0x02, r18	; 2
+	PORTB &= ~(1<<rowPin8);  
+ 766:	42 b1       	in	r20, 0x02	; 2
+ 768:	9c 01       	movw	r18, r24
+ 76a:	00 90 0c 01 	lds	r0, 0x010C
+ 76e:	02 c0       	rjmp	.+4      	; 0x774 <smiley+0x6ba>
+ 770:	22 0f       	add	r18, r18
+ 772:	33 1f       	adc	r19, r19
+ 774:	0a 94       	dec	r0
+ 776:	e2 f7       	brpl	.-8      	; 0x770 <smiley+0x6b6>
+ 778:	20 95       	com	r18
+ 77a:	24 23       	and	r18, r20
+ 77c:	22 b9       	out	0x02, r18	; 2
+ 77e:	42 b1       	in	r20, 0x02	; 2
+ 780:	9c 01       	movw	r18, r24
+ 782:	00 90 1e 01 	lds	r0, 0x011E
+ 786:	02 c0       	rjmp	.+4      	; 0x78c <smiley+0x6d2>
+
+    _delay_us(2000);
+
+//ROW6
+ //Col Low turns LED on
+	PORTA &= ~(1<<colPin1);
+ 788:	22 0f       	add	r18, r18
+ 78a:	33 1f       	adc	r19, r19
+ 78c:	0a 94       	dec	r0
+ 78e:	e2 f7       	brpl	.-8      	; 0x788 <smiley+0x6ce>
+ 790:	20 95       	com	r18
+ 792:	24 23       	and	r18, r20
+ 794:	22 b9       	out	0x02, r18	; 2
+ 796:	42 b1       	in	r20, 0x02	; 2
+ 798:	9c 01       	movw	r18, r24
+ 79a:	00 90 0a 01 	lds	r0, 0x010A
+ 79e:	02 c0       	rjmp	.+4      	; 0x7a4 <smiley+0x6ea>
+ 7a0:	22 0f       	add	r18, r18
+ 7a2:	33 1f       	adc	r19, r19
+	PORTB |= (1<<colPin2);
+ 7a4:	0a 94       	dec	r0
+ 7a6:	e2 f7       	brpl	.-8      	; 0x7a0 <smiley+0x6e6>
+ 7a8:	20 95       	com	r18
+ 7aa:	24 23       	and	r18, r20
+ 7ac:	22 b9       	out	0x02, r18	; 2
+ 7ae:	45 b1       	in	r20, 0x05	; 5
+ 7b0:	9c 01       	movw	r18, r24
+ 7b2:	00 90 08 01 	lds	r0, 0x0108
+ 7b6:	02 c0       	rjmp	.+4      	; 0x7bc <smiley+0x702>
+ 7b8:	22 0f       	add	r18, r18
+	PORTB &= ~(1<<colPin3);
+ 7ba:	33 1f       	adc	r19, r19
+ 7bc:	0a 94       	dec	r0
+ 7be:	e2 f7       	brpl	.-8      	; 0x7b8 <smiley+0x6fe>
+ 7c0:	20 95       	com	r18
+ 7c2:	24 23       	and	r18, r20
+ 7c4:	25 b9       	out	0x05, r18	; 5
+ 7c6:	42 b1       	in	r20, 0x02	; 2
+ 7c8:	9c 01       	movw	r18, r24
+ 7ca:	00 90 06 01 	lds	r0, 0x0106
+ 7ce:	02 c0       	rjmp	.+4      	; 0x7d4 <smiley+0x71a>
+ 7d0:	22 0f       	add	r18, r18
+	PORTA &= ~(1<<colPin4);
+ 7d2:	33 1f       	adc	r19, r19
+ 7d4:	0a 94       	dec	r0
+ 7d6:	e2 f7       	brpl	.-8      	; 0x7d0 <smiley+0x716>
+ 7d8:	20 95       	com	r18
+ 7da:	24 23       	and	r18, r20
+ 7dc:	22 b9       	out	0x02, r18	; 2
+ 7de:	45 b1       	in	r20, 0x05	; 5
+ 7e0:	9c 01       	movw	r18, r24
+ 7e2:	00 90 1c 01 	lds	r0, 0x011C
+ 7e6:	02 c0       	rjmp	.+4      	; 0x7ec <smiley+0x732>
+ 7e8:	22 0f       	add	r18, r18
+	PORTB &= ~(1<<colPin5);
+ 7ea:	33 1f       	adc	r19, r19
+ 7ec:	0a 94       	dec	r0
+ 7ee:	e2 f7       	brpl	.-8      	; 0x7e8 <smiley+0x72e>
+ 7f0:	24 2b       	or	r18, r20
+ 7f2:	25 b9       	out	0x05, r18	; 5
+ 7f4:	45 b1       	in	r20, 0x05	; 5
+ 7f6:	9c 01       	movw	r18, r24
+ 7f8:	00 90 04 01 	lds	r0, 0x0104
+ 7fc:	02 c0       	rjmp	.+4      	; 0x802 <smiley+0x748>
+ 7fe:	22 0f       	add	r18, r18
+ 800:	33 1f       	adc	r19, r19
+	PORTA &= ~(1<<colPin6);
+ 802:	0a 94       	dec	r0
+ 804:	e2 f7       	brpl	.-8      	; 0x7fe <smiley+0x744>
+ 806:	20 95       	com	r18
+ 808:	24 23       	and	r18, r20
+ 80a:	25 b9       	out	0x05, r18	; 5
+ 80c:	45 b1       	in	r20, 0x05	; 5
+ 80e:	9c 01       	movw	r18, r24
+ 810:	00 90 02 01 	lds	r0, 0x0102
+ 814:	02 c0       	rjmp	.+4      	; 0x81a <smiley+0x760>
+ 816:	22 0f       	add	r18, r18
+ 818:	33 1f       	adc	r19, r19
+	PORTA |= (1<<colPin7);
+ 81a:	0a 94       	dec	r0
+ 81c:	e2 f7       	brpl	.-8      	; 0x816 <smiley+0x75c>
+ 81e:	20 95       	com	r18
+ 820:	24 23       	and	r18, r20
+ 822:	25 b9       	out	0x05, r18	; 5
+ 824:	25 b1       	in	r18, 0x05	; 5
+ 826:	00 90 00 01 	lds	r0, 0x0100
+ 82a:	02 c0       	rjmp	.+4      	; 0x830 <smiley+0x776>
+ 82c:	88 0f       	add	r24, r24
+ 82e:	99 1f       	adc	r25, r25
+	PORTA &= ~(1<<colPin8);
+ 830:	0a 94       	dec	r0
+ 832:	e2 f7       	brpl	.-8      	; 0x82c <smiley+0x772>
+ 834:	80 95       	com	r24
+ 836:	82 23       	and	r24, r18
+ 838:	85 b9       	out	0x05, r24	; 5
+ 83a:	83 ef       	ldi	r24, 0xF3	; 243
+ 83c:	91 e0       	ldi	r25, 0x01	; 1
+ 83e:	01 97       	sbiw	r24, 0x01	; 1
+ 840:	f1 f7       	brne	.-4      	; 0x83e <smiley+0x784>
+ 842:	00 c0       	rjmp	.+0      	; 0x844 <smiley+0x78a>
+ 844:	00 00       	nop
+ 846:	42 b1       	in	r20, 0x02	; 2
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ 848:	81 e0       	ldi	r24, 0x01	; 1
+ 84a:	90 e0       	ldi	r25, 0x00	; 0
+ 84c:	9c 01       	movw	r18, r24
+ 84e:	00 90 1a 01 	lds	r0, 0x011A
+ 852:	02 c0       	rjmp	.+4      	; 0x858 <smiley+0x79e>
+ 854:	22 0f       	add	r18, r18
+ 856:	33 1f       	adc	r19, r19
+ 858:	0a 94       	dec	r0
+ 85a:	e2 f7       	brpl	.-8      	; 0x854 <smiley+0x79a>
+ 85c:	20 95       	com	r18
+ 85e:	24 23       	and	r18, r20
+	PORTA &= ~(1<<rowPin2);
+ 860:	22 b9       	out	0x02, r18	; 2
+ 862:	45 b1       	in	r20, 0x05	; 5
+ 864:	9c 01       	movw	r18, r24
+ 866:	00 90 18 01 	lds	r0, 0x0118
+ 86a:	02 c0       	rjmp	.+4      	; 0x870 <smiley+0x7b6>
+ 86c:	22 0f       	add	r18, r18
+ 86e:	33 1f       	adc	r19, r19
+ 870:	0a 94       	dec	r0
+ 872:	e2 f7       	brpl	.-8      	; 0x86c <smiley+0x7b2>
+ 874:	24 2b       	or	r18, r20
+ 876:	25 b9       	out	0x05, r18	; 5
+	PORTB &= ~(1<<rowPin3);
+ 878:	45 b1       	in	r20, 0x05	; 5
+ 87a:	9c 01       	movw	r18, r24
+ 87c:	00 90 16 01 	lds	r0, 0x0116
+ 880:	02 c0       	rjmp	.+4      	; 0x886 <smiley+0x7cc>
+ 882:	22 0f       	add	r18, r18
+ 884:	33 1f       	adc	r19, r19
+ 886:	0a 94       	dec	r0
+ 888:	e2 f7       	brpl	.-8      	; 0x882 <smiley+0x7c8>
+ 88a:	24 2b       	or	r18, r20
+ 88c:	25 b9       	out	0x05, r18	; 5
+ 88e:	42 b1       	in	r20, 0x02	; 2
+	PORTA &= ~(1<<rowPin4);
+ 890:	9c 01       	movw	r18, r24
+ 892:	00 90 14 01 	lds	r0, 0x0114
+ 896:	02 c0       	rjmp	.+4      	; 0x89c <smiley+0x7e2>
+ 898:	22 0f       	add	r18, r18
+ 89a:	33 1f       	adc	r19, r19
+ 89c:	0a 94       	dec	r0
+ 89e:	e2 f7       	brpl	.-8      	; 0x898 <smiley+0x7de>
+ 8a0:	20 95       	com	r18
+ 8a2:	24 23       	and	r18, r20
+ 8a4:	22 b9       	out	0x02, r18	; 2
+ 8a6:	45 b1       	in	r20, 0x05	; 5
+	PORTB &= ~(1<<rowPin5);
+ 8a8:	9c 01       	movw	r18, r24
+ 8aa:	00 90 12 01 	lds	r0, 0x0112
+ 8ae:	02 c0       	rjmp	.+4      	; 0x8b4 <smiley+0x7fa>
+ 8b0:	22 0f       	add	r18, r18
+ 8b2:	33 1f       	adc	r19, r19
+ 8b4:	0a 94       	dec	r0
+ 8b6:	e2 f7       	brpl	.-8      	; 0x8b0 <smiley+0x7f6>
+ 8b8:	20 95       	com	r18
+ 8ba:	24 23       	and	r18, r20
+ 8bc:	25 b9       	out	0x05, r18	; 5
+ 8be:	42 b1       	in	r20, 0x02	; 2
+	PORTB |= (1<<rowPin6);
+ 8c0:	9c 01       	movw	r18, r24
+ 8c2:	00 90 10 01 	lds	r0, 0x0110
+ 8c6:	02 c0       	rjmp	.+4      	; 0x8cc <smiley+0x812>
+ 8c8:	22 0f       	add	r18, r18
+ 8ca:	33 1f       	adc	r19, r19
+ 8cc:	0a 94       	dec	r0
+ 8ce:	e2 f7       	brpl	.-8      	; 0x8c8 <smiley+0x80e>
+ 8d0:	24 2b       	or	r18, r20
+ 8d2:	22 b9       	out	0x02, r18	; 2
+ 8d4:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin7);
+ 8d6:	9c 01       	movw	r18, r24
+ 8d8:	00 90 0e 01 	lds	r0, 0x010E
+ 8dc:	02 c0       	rjmp	.+4      	; 0x8e2 <smiley+0x828>
+ 8de:	22 0f       	add	r18, r18
+ 8e0:	33 1f       	adc	r19, r19
+ 8e2:	0a 94       	dec	r0
+ 8e4:	e2 f7       	brpl	.-8      	; 0x8de <smiley+0x824>
+ 8e6:	24 2b       	or	r18, r20
+ 8e8:	22 b9       	out	0x02, r18	; 2
+ 8ea:	42 b1       	in	r20, 0x02	; 2
+ 8ec:	9c 01       	movw	r18, r24
+	PORTB &= ~(1<<rowPin8);  
+ 8ee:	00 90 0c 01 	lds	r0, 0x010C
+ 8f2:	02 c0       	rjmp	.+4      	; 0x8f8 <smiley+0x83e>
+ 8f4:	22 0f       	add	r18, r18
+ 8f6:	33 1f       	adc	r19, r19
+ 8f8:	0a 94       	dec	r0
+ 8fa:	e2 f7       	brpl	.-8      	; 0x8f4 <smiley+0x83a>
+ 8fc:	20 95       	com	r18
+ 8fe:	24 23       	and	r18, r20
+ 900:	22 b9       	out	0x02, r18	; 2
+ 902:	42 b1       	in	r20, 0x02	; 2
+ 904:	9c 01       	movw	r18, r24
+ 906:	00 90 1e 01 	lds	r0, 0x011E
+ 90a:	02 c0       	rjmp	.+4      	; 0x910 <__stack+0x11>
+ 90c:	22 0f       	add	r18, r18
+ 90e:	33 1f       	adc	r19, r19
+
+    _delay_us(2000);	
+
+//ROW7
+ //Col Low turns LED on
+	PORTA |= (1<<colPin1);
+ 910:	0a 94       	dec	r0
+ 912:	e2 f7       	brpl	.-8      	; 0x90c <__stack+0xd>
+ 914:	20 95       	com	r18
+ 916:	24 23       	and	r18, r20
+ 918:	22 b9       	out	0x02, r18	; 2
+ 91a:	42 b1       	in	r20, 0x02	; 2
+ 91c:	9c 01       	movw	r18, r24
+ 91e:	00 90 0a 01 	lds	r0, 0x010A
+ 922:	02 c0       	rjmp	.+4      	; 0x928 <__stack+0x29>
+ 924:	22 0f       	add	r18, r18
+ 926:	33 1f       	adc	r19, r19
+ 928:	0a 94       	dec	r0
+	PORTB &= ~(1<<colPin2);
+ 92a:	e2 f7       	brpl	.-8      	; 0x924 <__stack+0x25>
+ 92c:	20 95       	com	r18
+ 92e:	24 23       	and	r18, r20
+ 930:	22 b9       	out	0x02, r18	; 2
+ 932:	45 b1       	in	r20, 0x05	; 5
+ 934:	9c 01       	movw	r18, r24
+ 936:	00 90 08 01 	lds	r0, 0x0108
+ 93a:	02 c0       	rjmp	.+4      	; 0x940 <__stack+0x41>
+ 93c:	22 0f       	add	r18, r18
+ 93e:	33 1f       	adc	r19, r19
+ 940:	0a 94       	dec	r0
+	PORTB |= (1<<colPin3);
+ 942:	e2 f7       	brpl	.-8      	; 0x93c <__stack+0x3d>
+ 944:	20 95       	com	r18
+ 946:	24 23       	and	r18, r20
+ 948:	25 b9       	out	0x05, r18	; 5
+ 94a:	42 b1       	in	r20, 0x02	; 2
+ 94c:	9c 01       	movw	r18, r24
+ 94e:	00 90 06 01 	lds	r0, 0x0106
+ 952:	02 c0       	rjmp	.+4      	; 0x958 <__stack+0x59>
+ 954:	22 0f       	add	r18, r18
+ 956:	33 1f       	adc	r19, r19
+	PORTA |= (1<<colPin4);
+ 958:	0a 94       	dec	r0
+ 95a:	e2 f7       	brpl	.-8      	; 0x954 <__stack+0x55>
+ 95c:	20 95       	com	r18
+ 95e:	24 23       	and	r18, r20
+ 960:	22 b9       	out	0x02, r18	; 2
+ 962:	45 b1       	in	r20, 0x05	; 5
+ 964:	9c 01       	movw	r18, r24
+ 966:	00 90 1c 01 	lds	r0, 0x011C
+ 96a:	02 c0       	rjmp	.+4      	; 0x970 <__stack+0x71>
+ 96c:	22 0f       	add	r18, r18
+	PORTB |= (1<<colPin5);
+ 96e:	33 1f       	adc	r19, r19
+ 970:	0a 94       	dec	r0
+ 972:	e2 f7       	brpl	.-8      	; 0x96c <__stack+0x6d>
+ 974:	20 95       	com	r18
+ 976:	24 23       	and	r18, r20
+ 978:	25 b9       	out	0x05, r18	; 5
+ 97a:	45 b1       	in	r20, 0x05	; 5
+ 97c:	9c 01       	movw	r18, r24
+ 97e:	00 90 04 01 	lds	r0, 0x0104
+ 982:	02 c0       	rjmp	.+4      	; 0x988 <__stack+0x89>
+	PORTA |= (1<<colPin6);
+ 984:	22 0f       	add	r18, r18
+ 986:	33 1f       	adc	r19, r19
+ 988:	0a 94       	dec	r0
+ 98a:	e2 f7       	brpl	.-8      	; 0x984 <__stack+0x85>
+ 98c:	24 2b       	or	r18, r20
+ 98e:	25 b9       	out	0x05, r18	; 5
+ 990:	45 b1       	in	r20, 0x05	; 5
+ 992:	9c 01       	movw	r18, r24
+ 994:	00 90 02 01 	lds	r0, 0x0102
+ 998:	02 c0       	rjmp	.+4      	; 0x99e <__stack+0x9f>
+	PORTA &= ~(1<<colPin7);
+ 99a:	22 0f       	add	r18, r18
+ 99c:	33 1f       	adc	r19, r19
+ 99e:	0a 94       	dec	r0
+ 9a0:	e2 f7       	brpl	.-8      	; 0x99a <__stack+0x9b>
+ 9a2:	20 95       	com	r18
+ 9a4:	24 23       	and	r18, r20
+ 9a6:	25 b9       	out	0x05, r18	; 5
+ 9a8:	25 b1       	in	r18, 0x05	; 5
+ 9aa:	00 90 00 01 	lds	r0, 0x0100
+ 9ae:	02 c0       	rjmp	.+4      	; 0x9b4 <__stack+0xb5>
+ 9b0:	88 0f       	add	r24, r24
+	PORTA |= (1<<colPin8);
+ 9b2:	99 1f       	adc	r25, r25
+ 9b4:	0a 94       	dec	r0
+ 9b6:	e2 f7       	brpl	.-8      	; 0x9b0 <__stack+0xb1>
+ 9b8:	80 95       	com	r24
+ 9ba:	82 23       	and	r24, r18
+ 9bc:	85 b9       	out	0x05, r24	; 5
+ 9be:	83 ef       	ldi	r24, 0xF3	; 243
+ 9c0:	91 e0       	ldi	r25, 0x01	; 1
+ 9c2:	01 97       	sbiw	r24, 0x01	; 1
+ 9c4:	f1 f7       	brne	.-4      	; 0x9c2 <__stack+0xc3>
+ 9c6:	00 c0       	rjmp	.+0      	; 0x9c8 <__stack+0xc9>
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ 9c8:	00 00       	nop
+ 9ca:	42 b1       	in	r20, 0x02	; 2
+ 9cc:	81 e0       	ldi	r24, 0x01	; 1
+ 9ce:	90 e0       	ldi	r25, 0x00	; 0
+ 9d0:	9c 01       	movw	r18, r24
+ 9d2:	00 90 1a 01 	lds	r0, 0x011A
+ 9d6:	02 c0       	rjmp	.+4      	; 0x9dc <__stack+0xdd>
+ 9d8:	22 0f       	add	r18, r18
+ 9da:	33 1f       	adc	r19, r19
+ 9dc:	0a 94       	dec	r0
+ 9de:	e2 f7       	brpl	.-8      	; 0x9d8 <__stack+0xd9>
+	PORTA &= ~(1<<rowPin2);
+ 9e0:	24 2b       	or	r18, r20
+ 9e2:	22 b9       	out	0x02, r18	; 2
+ 9e4:	45 b1       	in	r20, 0x05	; 5
+ 9e6:	9c 01       	movw	r18, r24
+ 9e8:	00 90 18 01 	lds	r0, 0x0118
+ 9ec:	02 c0       	rjmp	.+4      	; 0x9f2 <__stack+0xf3>
+ 9ee:	22 0f       	add	r18, r18
+ 9f0:	33 1f       	adc	r19, r19
+ 9f2:	0a 94       	dec	r0
+ 9f4:	e2 f7       	brpl	.-8      	; 0x9ee <__stack+0xef>
+ 9f6:	20 95       	com	r18
+	PORTB &= ~(1<<rowPin3);
+ 9f8:	24 23       	and	r18, r20
+ 9fa:	25 b9       	out	0x05, r18	; 5
+ 9fc:	45 b1       	in	r20, 0x05	; 5
+ 9fe:	9c 01       	movw	r18, r24
+ a00:	00 90 16 01 	lds	r0, 0x0116
+ a04:	02 c0       	rjmp	.+4      	; 0xa0a <__stack+0x10b>
+ a06:	22 0f       	add	r18, r18
+ a08:	33 1f       	adc	r19, r19
+ a0a:	0a 94       	dec	r0
+ a0c:	e2 f7       	brpl	.-8      	; 0xa06 <__stack+0x107>
+ a0e:	24 2b       	or	r18, r20
+	PORTA &= ~(1<<rowPin4);
+ a10:	25 b9       	out	0x05, r18	; 5
+ a12:	42 b1       	in	r20, 0x02	; 2
+ a14:	9c 01       	movw	r18, r24
+ a16:	00 90 14 01 	lds	r0, 0x0114
+ a1a:	02 c0       	rjmp	.+4      	; 0xa20 <__stack+0x121>
+ a1c:	22 0f       	add	r18, r18
+ a1e:	33 1f       	adc	r19, r19
+ a20:	0a 94       	dec	r0
+ a22:	e2 f7       	brpl	.-8      	; 0xa1c <__stack+0x11d>
+ a24:	24 2b       	or	r18, r20
+ a26:	22 b9       	out	0x02, r18	; 2
+	PORTB &= ~(1<<rowPin5);
+ a28:	45 b1       	in	r20, 0x05	; 5
+ a2a:	9c 01       	movw	r18, r24
+ a2c:	00 90 12 01 	lds	r0, 0x0112
+ a30:	02 c0       	rjmp	.+4      	; 0xa36 <__stack+0x137>
+ a32:	22 0f       	add	r18, r18
+ a34:	33 1f       	adc	r19, r19
+ a36:	0a 94       	dec	r0
+ a38:	e2 f7       	brpl	.-8      	; 0xa32 <__stack+0x133>
+ a3a:	24 2b       	or	r18, r20
+ a3c:	25 b9       	out	0x05, r18	; 5
+ a3e:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin6);
+ a40:	9c 01       	movw	r18, r24
+ a42:	00 90 10 01 	lds	r0, 0x0110
+ a46:	02 c0       	rjmp	.+4      	; 0xa4c <__stack+0x14d>
+ a48:	22 0f       	add	r18, r18
+ a4a:	33 1f       	adc	r19, r19
+ a4c:	0a 94       	dec	r0
+ a4e:	e2 f7       	brpl	.-8      	; 0xa48 <__stack+0x149>
+ a50:	24 2b       	or	r18, r20
+ a52:	22 b9       	out	0x02, r18	; 2
+ a54:	42 b1       	in	r20, 0x02	; 2
+ a56:	9c 01       	movw	r18, r24
+	PORTB |= (1<<rowPin7);
+ a58:	00 90 0e 01 	lds	r0, 0x010E
+ a5c:	02 c0       	rjmp	.+4      	; 0xa62 <__stack+0x163>
+ a5e:	22 0f       	add	r18, r18
+ a60:	33 1f       	adc	r19, r19
+ a62:	0a 94       	dec	r0
+ a64:	e2 f7       	brpl	.-8      	; 0xa5e <__stack+0x15f>
+ a66:	20 95       	com	r18
+ a68:	24 23       	and	r18, r20
+ a6a:	22 b9       	out	0x02, r18	; 2
+ a6c:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin8);  
+ a6e:	9c 01       	movw	r18, r24
+ a70:	00 90 0c 01 	lds	r0, 0x010C
+ a74:	02 c0       	rjmp	.+4      	; 0xa7a <__stack+0x17b>
+ a76:	22 0f       	add	r18, r18
+ a78:	33 1f       	adc	r19, r19
+ a7a:	0a 94       	dec	r0
+ a7c:	e2 f7       	brpl	.-8      	; 0xa76 <__stack+0x177>
+ a7e:	24 2b       	or	r18, r20
+ a80:	22 b9       	out	0x02, r18	; 2
+ a82:	42 b1       	in	r20, 0x02	; 2
+ a84:	9c 01       	movw	r18, r24
+ a86:	00 90 1e 01 	lds	r0, 0x011E
+ a8a:	02 c0       	rjmp	.+4      	; 0xa90 <__stack+0x191>
+ a8c:	22 0f       	add	r18, r18
+ a8e:	33 1f       	adc	r19, r19
+
+    _delay_us(2000);
+
+//ROW8
+ //Col Low turns LED on
+	PORTA |= (1<<colPin1);
+ a90:	0a 94       	dec	r0
+ a92:	e2 f7       	brpl	.-8      	; 0xa8c <__stack+0x18d>
+ a94:	20 95       	com	r18
+ a96:	24 23       	and	r18, r20
+ a98:	22 b9       	out	0x02, r18	; 2
+ a9a:	42 b1       	in	r20, 0x02	; 2
+ a9c:	9c 01       	movw	r18, r24
+ a9e:	00 90 0a 01 	lds	r0, 0x010A
+ aa2:	02 c0       	rjmp	.+4      	; 0xaa8 <__stack+0x1a9>
+ aa4:	22 0f       	add	r18, r18
+ aa6:	33 1f       	adc	r19, r19
+ aa8:	0a 94       	dec	r0
+	PORTB |= (1<<colPin2);
+ aaa:	e2 f7       	brpl	.-8      	; 0xaa4 <__stack+0x1a5>
+ aac:	20 95       	com	r18
+ aae:	24 23       	and	r18, r20
+ ab0:	22 b9       	out	0x02, r18	; 2
+ ab2:	45 b1       	in	r20, 0x05	; 5
+ ab4:	9c 01       	movw	r18, r24
+ ab6:	00 90 08 01 	lds	r0, 0x0108
+ aba:	02 c0       	rjmp	.+4      	; 0xac0 <__stack+0x1c1>
+ abc:	22 0f       	add	r18, r18
+	PORTB &= ~(1<<colPin3);
+ abe:	33 1f       	adc	r19, r19
+ ac0:	0a 94       	dec	r0
+ ac2:	e2 f7       	brpl	.-8      	; 0xabc <__stack+0x1bd>
+ ac4:	20 95       	com	r18
+ ac6:	24 23       	and	r18, r20
+ ac8:	25 b9       	out	0x05, r18	; 5
+ aca:	42 b1       	in	r20, 0x02	; 2
+ acc:	9c 01       	movw	r18, r24
+ ace:	00 90 06 01 	lds	r0, 0x0106
+ ad2:	02 c0       	rjmp	.+4      	; 0xad8 <__stack+0x1d9>
+ ad4:	22 0f       	add	r18, r18
+ ad6:	33 1f       	adc	r19, r19
+ ad8:	0a 94       	dec	r0
+	PORTA &= ~(1<<colPin4);
+ ada:	e2 f7       	brpl	.-8      	; 0xad4 <__stack+0x1d5>
+ adc:	20 95       	com	r18
+ ade:	24 23       	and	r18, r20
+ ae0:	22 b9       	out	0x02, r18	; 2
+ ae2:	45 b1       	in	r20, 0x05	; 5
+ ae4:	9c 01       	movw	r18, r24
+ ae6:	00 90 1c 01 	lds	r0, 0x011C
+ aea:	02 c0       	rjmp	.+4      	; 0xaf0 <__stack+0x1f1>
+ aec:	22 0f       	add	r18, r18
+ aee:	33 1f       	adc	r19, r19
+ af0:	0a 94       	dec	r0
+	PORTB &= ~(1<<colPin5);
+ af2:	e2 f7       	brpl	.-8      	; 0xaec <__stack+0x1ed>
+ af4:	20 95       	com	r18
+ af6:	24 23       	and	r18, r20
+ af8:	25 b9       	out	0x05, r18	; 5
+ afa:	45 b1       	in	r20, 0x05	; 5
+ afc:	9c 01       	movw	r18, r24
+ afe:	00 90 04 01 	lds	r0, 0x0104
+ b02:	02 c0       	rjmp	.+4      	; 0xb08 <__stack+0x209>
+ b04:	22 0f       	add	r18, r18
+ b06:	33 1f       	adc	r19, r19
+ b08:	0a 94       	dec	r0
+	PORTA &= ~(1<<colPin6);
+ b0a:	e2 f7       	brpl	.-8      	; 0xb04 <__stack+0x205>
+ b0c:	20 95       	com	r18
+ b0e:	24 23       	and	r18, r20
+ b10:	25 b9       	out	0x05, r18	; 5
+ b12:	45 b1       	in	r20, 0x05	; 5
+ b14:	9c 01       	movw	r18, r24
+ b16:	00 90 02 01 	lds	r0, 0x0102
+ b1a:	02 c0       	rjmp	.+4      	; 0xb20 <__stack+0x221>
+ b1c:	22 0f       	add	r18, r18
+ b1e:	33 1f       	adc	r19, r19
+ b20:	0a 94       	dec	r0
+	PORTA |= (1<<colPin7);
+ b22:	e2 f7       	brpl	.-8      	; 0xb1c <__stack+0x21d>
+ b24:	24 2b       	or	r18, r20
+ b26:	25 b9       	out	0x05, r18	; 5
+ b28:	25 b1       	in	r18, 0x05	; 5
+ b2a:	00 90 00 01 	lds	r0, 0x0100
+ b2e:	02 c0       	rjmp	.+4      	; 0xb34 <__stack+0x235>
+ b30:	88 0f       	add	r24, r24
+ b32:	99 1f       	adc	r25, r25
+ b34:	0a 94       	dec	r0
+ b36:	e2 f7       	brpl	.-8      	; 0xb30 <__stack+0x231>
+	PORTA |= (1<<colPin8);
+ b38:	80 95       	com	r24
+ b3a:	82 23       	and	r24, r18
+ b3c:	85 b9       	out	0x05, r24	; 5
+ b3e:	83 ef       	ldi	r24, 0xF3	; 243
+ b40:	91 e0       	ldi	r25, 0x01	; 1
+ b42:	01 97       	sbiw	r24, 0x01	; 1
+ b44:	f1 f7       	brne	.-4      	; 0xb42 <__stack+0x243>
+ b46:	00 c0       	rjmp	.+0      	; 0xb48 <__stack+0x249>
+ b48:	00 00       	nop
+ b4a:	42 b1       	in	r20, 0x02	; 2
+ b4c:	81 e0       	ldi	r24, 0x01	; 1
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ b4e:	90 e0       	ldi	r25, 0x00	; 0
+ b50:	9c 01       	movw	r18, r24
+ b52:	00 90 1a 01 	lds	r0, 0x011A
+ b56:	02 c0       	rjmp	.+4      	; 0xb5c <__stack+0x25d>
+ b58:	22 0f       	add	r18, r18
+ b5a:	33 1f       	adc	r19, r19
+ b5c:	0a 94       	dec	r0
+ b5e:	e2 f7       	brpl	.-8      	; 0xb58 <__stack+0x259>
+ b60:	24 2b       	or	r18, r20
+ b62:	22 b9       	out	0x02, r18	; 2
+ b64:	25 b1       	in	r18, 0x05	; 5
+	PORTA &= ~(1<<rowPin2);
+ b66:	00 90 18 01 	lds	r0, 0x0118
+ b6a:	02 c0       	rjmp	.+4      	; 0xb70 <__stack+0x271>
+ b6c:	88 0f       	add	r24, r24
+ b6e:	99 1f       	adc	r25, r25
+ b70:	0a 94       	dec	r0
+ b72:	e2 f7       	brpl	.-8      	; 0xb6c <__stack+0x26d>
+ b74:	82 2b       	or	r24, r18
+ b76:	85 b9       	out	0x05, r24	; 5
+ b78:	45 b1       	in	r20, 0x05	; 5
+ b7a:	81 e0       	ldi	r24, 0x01	; 1
+ b7c:	90 e0       	ldi	r25, 0x00	; 0
+	PORTB &= ~(1<<rowPin3);
+ b7e:	9c 01       	movw	r18, r24
+ b80:	00 90 16 01 	lds	r0, 0x0116
+ b84:	02 c0       	rjmp	.+4      	; 0xb8a <__stack+0x28b>
+ b86:	22 0f       	add	r18, r18
+ b88:	33 1f       	adc	r19, r19
+ b8a:	0a 94       	dec	r0
+ b8c:	e2 f7       	brpl	.-8      	; 0xb86 <__stack+0x287>
+ b8e:	20 95       	com	r18
+ b90:	24 23       	and	r18, r20
+ b92:	25 b9       	out	0x05, r18	; 5
+ b94:	42 b1       	in	r20, 0x02	; 2
+	PORTA &= ~(1<<rowPin4);
+ b96:	9c 01       	movw	r18, r24
+ b98:	00 90 14 01 	lds	r0, 0x0114
+ b9c:	02 c0       	rjmp	.+4      	; 0xba2 <__stack+0x2a3>
+ b9e:	22 0f       	add	r18, r18
+ ba0:	33 1f       	adc	r19, r19
+ ba2:	0a 94       	dec	r0
+ ba4:	e2 f7       	brpl	.-8      	; 0xb9e <__stack+0x29f>
+ ba6:	20 95       	com	r18
+ ba8:	24 23       	and	r18, r20
+ baa:	22 b9       	out	0x02, r18	; 2
+ bac:	45 b1       	in	r20, 0x05	; 5
+	PORTB &= ~(1<<rowPin5);
+ bae:	9c 01       	movw	r18, r24
+ bb0:	00 90 12 01 	lds	r0, 0x0112
+ bb4:	02 c0       	rjmp	.+4      	; 0xbba <__stack+0x2bb>
+ bb6:	22 0f       	add	r18, r18
+ bb8:	33 1f       	adc	r19, r19
+ bba:	0a 94       	dec	r0
+ bbc:	e2 f7       	brpl	.-8      	; 0xbb6 <__stack+0x2b7>
+ bbe:	20 95       	com	r18
+ bc0:	24 23       	and	r18, r20
+ bc2:	25 b9       	out	0x05, r18	; 5
+ bc4:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin6);
+ bc6:	9c 01       	movw	r18, r24
+ bc8:	00 90 10 01 	lds	r0, 0x0110
+ bcc:	02 c0       	rjmp	.+4      	; 0xbd2 <__stack+0x2d3>
+ bce:	22 0f       	add	r18, r18
+ bd0:	33 1f       	adc	r19, r19
+ bd2:	0a 94       	dec	r0
+ bd4:	e2 f7       	brpl	.-8      	; 0xbce <__stack+0x2cf>
+ bd6:	20 95       	com	r18
+ bd8:	24 23       	and	r18, r20
+ bda:	22 b9       	out	0x02, r18	; 2
+ bdc:	42 b1       	in	r20, 0x02	; 2
+	PORTB &= ~(1<<rowPin7);
+ bde:	9c 01       	movw	r18, r24
+ be0:	00 90 0e 01 	lds	r0, 0x010E
+ be4:	02 c0       	rjmp	.+4      	; 0xbea <__stack+0x2eb>
+ be6:	22 0f       	add	r18, r18
+ be8:	33 1f       	adc	r19, r19
+ bea:	0a 94       	dec	r0
+ bec:	e2 f7       	brpl	.-8      	; 0xbe6 <__stack+0x2e7>
+ bee:	24 2b       	or	r18, r20
+ bf0:	22 b9       	out	0x02, r18	; 2
+ bf2:	42 b1       	in	r20, 0x02	; 2
+ bf4:	9c 01       	movw	r18, r24
+	PORTB |= (1<<rowPin8);  
+ bf6:	00 90 0c 01 	lds	r0, 0x010C
+ bfa:	02 c0       	rjmp	.+4      	; 0xc00 <__stack+0x301>
+ bfc:	22 0f       	add	r18, r18
+ bfe:	33 1f       	adc	r19, r19
+ c00:	0a 94       	dec	r0
+ c02:	e2 f7       	brpl	.-8      	; 0xbfc <__stack+0x2fd>
+ c04:	24 2b       	or	r18, r20
+ c06:	22 b9       	out	0x02, r18	; 2
+ c08:	42 b1       	in	r20, 0x02	; 2
+ c0a:	9c 01       	movw	r18, r24
+ c0c:	00 90 1e 01 	lds	r0, 0x011E
+ c10:	02 c0       	rjmp	.+4      	; 0xc16 <__stack+0x317>
+ c12:	22 0f       	add	r18, r18
+ c14:	33 1f       	adc	r19, r19
+ c16:	0a 94       	dec	r0
+	PORTA &= ~(1<<colPin6);
+	PORTA |= (1<<colPin7);
+	PORTA |= (1<<colPin8);
+    
+ //Row High turns LED on
+	PORTA &= ~(1<<rowPin1);
+ c18:	e2 f7       	brpl	.-8      	; 0xc12 <__stack+0x313>
+ c1a:	20 95       	com	r18
+ c1c:	24 23       	and	r18, r20
+ c1e:	22 b9       	out	0x02, r18	; 2
+	PORTA &= ~(1<<rowPin2);
+ c20:	42 b1       	in	r20, 0x02	; 2
+ c22:	9c 01       	movw	r18, r24
+ c24:	00 90 0a 01 	lds	r0, 0x010A
+ c28:	02 c0       	rjmp	.+4      	; 0xc2e <__stack+0x32f>
+ c2a:	22 0f       	add	r18, r18
+ c2c:	33 1f       	adc	r19, r19
+ c2e:	0a 94       	dec	r0
+ c30:	e2 f7       	brpl	.-8      	; 0xc2a <__stack+0x32b>
+ c32:	20 95       	com	r18
+ c34:	24 23       	and	r18, r20
+ c36:	22 b9       	out	0x02, r18	; 2
+	PORTB &= ~(1<<rowPin3);
+ c38:	45 b1       	in	r20, 0x05	; 5
+ c3a:	9c 01       	movw	r18, r24
+ c3c:	00 90 08 01 	lds	r0, 0x0108
+ c40:	02 c0       	rjmp	.+4      	; 0xc46 <__stack+0x347>
+ c42:	22 0f       	add	r18, r18
+ c44:	33 1f       	adc	r19, r19
+ c46:	0a 94       	dec	r0
+ c48:	e2 f7       	brpl	.-8      	; 0xc42 <__stack+0x343>
+ c4a:	20 95       	com	r18
+ c4c:	24 23       	and	r18, r20
+ c4e:	25 b9       	out	0x05, r18	; 5
+	PORTA &= ~(1<<rowPin4);
+ c50:	42 b1       	in	r20, 0x02	; 2
+ c52:	9c 01       	movw	r18, r24
+ c54:	00 90 06 01 	lds	r0, 0x0106
+ c58:	02 c0       	rjmp	.+4      	; 0xc5e <__stack+0x35f>
+ c5a:	22 0f       	add	r18, r18
+ c5c:	33 1f       	adc	r19, r19
+ c5e:	0a 94       	dec	r0
+ c60:	e2 f7       	brpl	.-8      	; 0xc5a <__stack+0x35b>
+ c62:	20 95       	com	r18
+ c64:	24 23       	and	r18, r20
+ c66:	22 b9       	out	0x02, r18	; 2
+	PORTB &= ~(1<<rowPin5);
+ c68:	45 b1       	in	r20, 0x05	; 5
+ c6a:	9c 01       	movw	r18, r24
+ c6c:	00 90 1c 01 	lds	r0, 0x011C
+ c70:	02 c0       	rjmp	.+4      	; 0xc76 <__stack+0x377>
+ c72:	22 0f       	add	r18, r18
+ c74:	33 1f       	adc	r19, r19
+ c76:	0a 94       	dec	r0
+ c78:	e2 f7       	brpl	.-8      	; 0xc72 <__stack+0x373>
+ c7a:	20 95       	com	r18
+ c7c:	24 23       	and	r18, r20
+ c7e:	25 b9       	out	0x05, r18	; 5
+	PORTB &= ~(1<<rowPin6);
+ c80:	45 b1       	in	r20, 0x05	; 5
+ c82:	9c 01       	movw	r18, r24
+ c84:	00 90 04 01 	lds	r0, 0x0104
+ c88:	02 c0       	rjmp	.+4      	; 0xc8e <__stack+0x38f>
+ c8a:	22 0f       	add	r18, r18
+ c8c:	33 1f       	adc	r19, r19
+ c8e:	0a 94       	dec	r0
+ c90:	e2 f7       	brpl	.-8      	; 0xc8a <__stack+0x38b>
+ c92:	20 95       	com	r18
+ c94:	24 23       	and	r18, r20
+ c96:	25 b9       	out	0x05, r18	; 5
+	PORTB &= ~(1<<rowPin7);
+ c98:	45 b1       	in	r20, 0x05	; 5
+ c9a:	9c 01       	movw	r18, r24
+ c9c:	00 90 02 01 	lds	r0, 0x0102
+ ca0:	02 c0       	rjmp	.+4      	; 0xca6 <__stack+0x3a7>
+ ca2:	22 0f       	add	r18, r18
+ ca4:	33 1f       	adc	r19, r19
+ ca6:	0a 94       	dec	r0
+ ca8:	e2 f7       	brpl	.-8      	; 0xca2 <__stack+0x3a3>
+ caa:	20 95       	com	r18
+ cac:	24 23       	and	r18, r20
+ cae:	25 b9       	out	0x05, r18	; 5
+	PORTB |= (1<<rowPin8);  
+ cb0:	25 b1       	in	r18, 0x05	; 5
+ cb2:	00 90 00 01 	lds	r0, 0x0100
+ cb6:	02 c0       	rjmp	.+4      	; 0xcbc <__stack+0x3bd>
+ cb8:	88 0f       	add	r24, r24
+ cba:	99 1f       	adc	r25, r25
+ cbc:	0a 94       	dec	r0
+ cbe:	e2 f7       	brpl	.-8      	; 0xcb8 <__stack+0x3b9>
+ cc0:	82 2b       	or	r24, r18
+ cc2:	85 b9       	out	0x05, r24	; 5
+ cc4:	83 ef       	ldi	r24, 0xF3	; 243
+ cc6:	91 e0       	ldi	r25, 0x01	; 1
+ cc8:	01 97       	sbiw	r24, 0x01	; 1
+ cca:	f1 f7       	brne	.-4      	; 0xcc8 <__stack+0x3c9>
+ ccc:	00 c0       	rjmp	.+0      	; 0xcce <__stack+0x3cf>
+ cce:	00 00       	nop
+ cd0:	08 95       	ret
+
+00000cd2 <main>:
+int rowPin8 = PINB4;	//Pin 5
+
+int main(void)
+{
+
+		DDRA = 0xFF;	//Row
+ cd2:	8f ef       	ldi	r24, 0xFF	; 255
+ cd4:	81 b9       	out	0x01, r24	; 1
+		DDRB = 0XFF;	//Column
+ cd6:	84 b9       	out	0x04, r24	; 4
+	
+	while (1)
+	{
+		smiley();
+ cd8:	0e 94 5d 00 	call	0xba	; 0xba <smiley>
+ cdc:	fd cf       	rjmp	.-6      	; 0xcd8 <main+0x6>
+
+00000cde <_exit>:
+ cde:	f8 94       	cli
+
+00000ce0 <__stop_program>:
+ ce0:	ff cf       	rjmp	.-2      	; 0xce0 <__stop_program>
